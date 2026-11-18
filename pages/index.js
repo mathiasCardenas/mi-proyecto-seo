@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -18,13 +19,18 @@ export default function Home() {
         <meta property="og:image" content="/images/seo-image.png" />
         <meta property="og:type" content="website" />
       </Head>
-      <div style={{ padding: '40px', fontFamily: 'system-ui, sans-serif', maxWidth: '800px', margin: '0 auto' }}>
-        <h1 style={{ color: '#0f172a', fontSize: '2.2rem', marginBottom: '1rem' }}>
-          Bienvenido a mi página optimizada
-        </h1>
-        <p style={{ color: '#475569', fontSize: '1.2rem', lineHeight: '1.6' }}>
-          Aprende cómo mejorar el rendimiento y SEO en Next.js.
-        </p>
+      <div style={{ padding: '40px', fontFamily: 'system-ui, sans-serif', maxWidth: '900px', margin: '0 auto' }}>
+        <h1 style={{ color: '#0f172a', marginBottom: '1.5rem' }}>Bienvenido</h1>
+        <div style={{ borderRadius: '12px', overflow: 'hidden', boxShadow: '0 4px 20px rgba(0,0,0,0.1)' }}>
+          <Image
+            src="/images/seo-image.png"
+            width={800}
+            height={400}
+            alt="Ejemplo de imagen optimizada"
+            priority
+            style={{ width: '100%', height: 'auto', display: 'block' }}
+          />
+        </div>
       </div>
     </>
   );
